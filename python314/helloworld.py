@@ -1,0 +1,8 @@
+# print("hello world")
+# print(2+1)
+# print(8*8)
+# print()
+# print("the end 55", "or is it?", "keep", 3 )
+# print(type ("th"))
+# print(type (5))
+# print(type (5.5))
