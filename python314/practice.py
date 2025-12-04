@@ -8,10 +8,23 @@
 #     for y in range(1, 5):
 #         print('%d * %d = %d' % (y, x, x*y))
 
-sentence = "What is the Airspeed velocity of an Unladen Swallow?"
+# sentence = "What is the Airspeed velocity of an Unladen Swallow?"
+#
+#
+#
+# sen_dict = {word: int(len(word)) for word in sentence.split(" ")}
+#
+# print(sen_dict)
+
+fruits =["Apple", "Pear", "Orange"]
+
+def make_pie(index):
+    try:
+        fruit = fruits[index]
+    except IndexError:
+        print("Fruit pie")
+    else:
+        print(fruit + " pie")
 
 
-
-sen_dict = {word: int(len(word)) for word in sentence.split(" ")}
-
-print(sen_dict)
+make_pie(4)
