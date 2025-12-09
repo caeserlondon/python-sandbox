@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 driver = webdriver.Chrome()
-wait = WebDriverWait(driver, 10)
+wait = WebDriverWait(driver, 5)
 driver.get("https://www.wikipedia.org/")
 
 english_button = wait.until(
