@@ -20,7 +20,7 @@ def make_underline(function):
 @app.route("/")
 @make_bold
 @make_underline
-@make_emphasis
+# @make_emphasis
 def hello_world():
     return "<p>Hello, World!</p>"
 
