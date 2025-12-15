@@ -21,7 +21,10 @@ from first_app import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path("help/", include('first_app.urls')),
+    path("users/", include('first_app.urls')),
     path('admin/', admin.site.urls),
+    path("companies/", views.companies, name='companies'),
+    # path("companies/", views.companies, name="companies"),
+    # path("users/", views.users, name="users"),
 
 ]
