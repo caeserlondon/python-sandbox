@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" />
-		content="width=device-width, user-scalable=no, initial-scale=1.0,
-		maximum-scale=1.0, minimum-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Users</title>
-		<link rel="stylesheet" href="{% static 'css/my_style.css' %}" />
-	</head>
-	<body>
-		<h1>Here are the Users</h1>
-		{% if users %}
-		<ol>
-			{% for user in users %}
-			<li>User Info</li>
-			<ul>
-				<li>First Name: {{ user.first_name }}</li>
-				<li>Last Name: {{ user.last_name }}</li>
-				<li>Email: {{ user.email }}</li>
-			</ul>
-			{% endfor %}
-		</ol>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"/>
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0,
+    maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Users</title>
+    <link rel="stylesheet" href="{% static 'css/my_style.css' %}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<!--		<h1>Here are the Users</h1>-->
+<!--		{% if users %}-->
+<!--		<ol>-->
+<!--			{% for user in users %}-->
+<!--			<li>User Info</li>-->
+<!--			<ul>-->
+<!--				<li>First Name: {{ user.first_name }}</li>-->
+<!--				<li>Last Name: {{ user.last_name }}</li>-->
+<!--				<li>Email: {{ user.email }}</li>-->
+<!--			</ul>-->
+<!--			{% endfor %}-->
+<!--		</ol>-->
 
-		{% endif %}
-	</body>
+<!--		{% endif %}-->
+<!--	</body>-->
+<div class="container">
+    <h1>Please sign up here</h1>
+    <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="Sign Up" class="btn btn-primary"/>
+    </form>
+</div>
+</body>
 </html>
