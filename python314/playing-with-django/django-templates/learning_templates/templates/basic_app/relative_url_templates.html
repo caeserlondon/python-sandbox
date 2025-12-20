@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Relative Page</title>
+</head>
+<body>
+<h1>Relative Page</h1>
+<h2>Relative url templates</h2>
+<div>
+
+<a href="{% url 'basic_app:other' %}"><h3>Go to The other page</h3></a>
+</div>
+<div>
+<a href="{% url 'admin:index' %}">To Admin Page</a>
+    <div>
+        <a href="{% url 'index' %}">Index Page</a>
+    </div>
+
+</div>
+</body>
+</html>
